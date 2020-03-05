@@ -1,0 +1,171 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R Rin1
+U 1 1 5E5D3B89
+P 1600 1750
+F 0 "Rin1" H 1670 1796 50  0000 L CNN
+F 1 "10k" H 1670 1705 50  0000 L CNN
+F 2 "" V 1530 1750 50  0001 C CNN
+F 3 "~" H 1600 1750 50  0001 C CNN
+	1    1600 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R Rin2
+U 1 1 5E5D3C6C
+P 2900 2350
+F 0 "Rin2" H 2970 2396 50  0000 L CNN
+F 1 "10k" H 2970 2305 50  0000 L CNN
+F 2 "" V 2830 2350 50  0001 C CNN
+F 3 "~" H 2900 2350 50  0001 C CNN
+	1    2900 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR?
+U 1 1 5E5D3E37
+P 1600 2700
+F 0 "#PWR?" H 1600 2450 50  0001 C CNN
+F 1 "Earth" H 1600 2550 50  0001 C CNN
+F 2 "" H 1600 2700 50  0001 C CNN
+F 3 "~" H 1600 2700 50  0001 C CNN
+	1    1600 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR?
+U 1 1 5E5D3E5F
+P 2900 2750
+F 0 "#PWR?" H 2900 2500 50  0001 C CNN
+F 1 "Earth" H 2900 2600 50  0001 C CNN
+F 2 "" H 2900 2750 50  0001 C CNN
+F 3 "~" H 2900 2750 50  0001 C CNN
+	1    2900 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_SPST SW?
+U 1 1 5E5D4269
+P 1600 2300
+F 0 "SW?" V 1554 2398 50  0000 L CNN
+F 1 "SW_SPST" V 1645 2398 50  0000 L CNN
+F 2 "" H 1600 2300 50  0001 C CNN
+F 3 "" H 1600 2300 50  0001 C CNN
+	1    1600 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5E5D452A
+P 1600 1350
+F 0 "#PWR?" H 1600 1200 50  0001 C CNN
+F 1 "VCC" H 1617 1523 50  0000 C CNN
+F 2 "" H 1600 1350 50  0001 C CNN
+F 3 "" H 1600 1350 50  0001 C CNN
+	1    1600 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 1350 1600 1600
+Wire Wire Line
+	1600 1900 1600 2000
+Wire Wire Line
+	1600 2500 1600 2700
+Text GLabel 2150 2000 2    50   Input ~ 0
+IN1
+Wire Wire Line
+	2150 2000 1600 2000
+Connection ~ 1600 2000
+Wire Wire Line
+	1600 2000 1600 2100
+$Comp
+L Switch:SW_SPST SW?
+U 1 1 5E5D4675
+P 2900 1850
+F 0 "SW?" V 2854 1948 50  0000 L CNN
+F 1 "SW_SPST" V 2945 1948 50  0000 L CNN
+F 2 "" H 2900 1850 50  0001 C CNN
+F 3 "" H 2900 1850 50  0001 C CNN
+	1    2900 1850
+	0    1    1    0   
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5E5D49B5
+P 2900 1400
+F 0 "#PWR?" H 2900 1250 50  0001 C CNN
+F 1 "VCC" H 2917 1573 50  0000 C CNN
+F 2 "" H 2900 1400 50  0001 C CNN
+F 3 "" H 2900 1400 50  0001 C CNN
+	1    2900 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 1400 2900 1650
+Wire Wire Line
+	2900 2050 2900 2150
+Wire Wire Line
+	2900 2500 2900 2750
+Text GLabel 3450 2150 2    50   Input ~ 0
+IN2
+Wire Wire Line
+	3450 2150 2900 2150
+Connection ~ 2900 2150
+Wire Wire Line
+	2900 2150 2900 2200
+Text GLabel 1300 3500 0    50   Input ~ 0
+OUT1
+$Comp
+L Device:R Rlim
+U 1 1 5E5D5088
+P 1850 3500
+F 0 "Rlim" V 1643 3500 50  0000 C CNN
+F 1 "220R" V 1734 3500 50  0000 C CNN
+F 2 "" V 1780 3500 50  0001 C CNN
+F 3 "~" H 1850 3500 50  0001 C CNN
+	1    1850 3500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1300 3500 1700 3500
+$Comp
+L Device:LED D?
+U 1 1 5E5D51FF
+P 2550 3500
+F 0 "D?" H 2542 3245 50  0000 C CNN
+F 1 "LED" H 2542 3336 50  0000 C CNN
+F 2 "" H 2550 3500 50  0001 C CNN
+F 3 "~" H 2550 3500 50  0001 C CNN
+	1    2550 3500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2000 3500 2400 3500
+$Comp
+L power:Earth #PWR?
+U 1 1 5E5D534A
+P 3100 3500
+F 0 "#PWR?" H 3100 3250 50  0001 C CNN
+F 1 "Earth" H 3100 3350 50  0001 C CNN
+F 2 "" H 3100 3500 50  0001 C CNN
+F 3 "~" H 3100 3500 50  0001 C CNN
+	1    3100 3500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2700 3500 3100 3500
+$EndSCHEMATC
