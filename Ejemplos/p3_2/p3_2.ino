@@ -4,14 +4,11 @@ void setup ()
 }
 void loop ()
 {
-  int nota = 80;
-  if (nota >= 85){
-    Serial.println("Promocionado");
-  }else if(nota < 65)
-  {
-     Serial.println("Libre");
-  }else{
-     Serial.println("Regular");
-  } 
+  int numero = 1;
+  do{
+    Serial.println(numero);
+    numero ++;
+    delay(500);
+  }while(numero <=10);
   delay(10000);
 }
